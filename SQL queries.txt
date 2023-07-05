@@ -1,0 +1,17 @@
+SQL queries
+
+select * from user_info where email = 'areebbutt610@gmail.com' and password = 'areeb@123'; (login)
+
+INSERT INTO `user_info`( `name`, `email`, `password`, `dob`, `image`, `occupation`, `status`) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]','[value-6]',false,true) (create employee)
+
+UPDATE `user_info` SET `status`=false WHERE id=2; (block account)
+
+SELECT `check_in`, `check_out`, `checkin_image`, `checkout_image`, `date` FROM `attendance` WHERE id=1; (view attendance of specific employee)
+
+SELECT  `check_in` FROM `attendance` WHERE date="2023-07-05" and id=1; (to verify chekin)
+
+INSERT INTO `attendance`(`id`, `check_in`,  `checkin_image`,  `date`) VALUES (1,'17:20:30','[value-3]','[value-4]') (insert check-in attendance)
+
+UPDATE `attendance` SET `check_out`='13:17:27',`checkout_image`='[value-5]' WHERE date= "2023:07:05" and id=6; (for check-out time)
+
+SELECT `id`, `name`, `email`, `dob`, `image`, `status` FROM `user_info` WHERE occupation=false (for general data of employees)
