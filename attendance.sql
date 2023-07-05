@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2023 at 02:26 PM
+-- Generation Time: Jul 05, 2023 at 02:37 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL,
-  `check_in` time NOT NULL DEFAULT current_timestamp(),
-  `check_out` time NOT NULL DEFAULT current_timestamp(),
+  `check_in` time NOT NULL,
+  `check_out` time NOT NULL,
   `checkin_image` varchar(255) NOT NULL,
   `checkout_image` varchar(255) NOT NULL,
   `date` date NOT NULL
