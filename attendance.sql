@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2023 at 01:23 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jul 05, 2023 at 01:48 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,20 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `attendance`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `attendance`
---
-
-CREATE TABLE `attendance` (
-  `id` int(11) DEFAULT NULL,
-  `check_in` time NOT NULL DEFAULT current_timestamp(),
-  `check_out` time NOT NULL DEFAULT current_timestamp(),
-  `image_name` varchar(255) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -53,14 +39,21 @@ CREATE TABLE `user_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `user_info`
 --
 
+INSERT INTO `user_info` (`id`, `name`, `email`, `password`, `dob`, `image`, `occupation`, `status`) VALUES
+(1, 'Hamza Iqbal', 'f190248@nu.edu.pk', 'hamza@123', '1997-07-17', 'f190248@nu.png', 1, 1),
+(2, 'Areeb Saqib', 'areebbutt610@gmail.com', 'areeb@123', '1997-07-07', 'areebbutt610@gmail.png', 1, 1),
+(3, 'Faiqa Zulfiqar', 'faiqarao03@gmail.com', 'faiqa@123', '1997-06-07', 'faiqarao03@gmail.png', 1, 1),
+(4, 'Talha Khalil', 'talhakhalil535@gmail.com', 'Talha@123', '1997-07-07', 'talhakhalil535@gmail.png', 0, 1),
+(5, 'Malik Muhammad Tayyab', 'tayyabshahid597@gmail.com', 'Malik@123', '1997-07-07', 'tayyabshahid597@gmail.png', 0, 1),
+(6, 'Asfar Waheed', '2019ee260@student.uet.edu.pk', 'Asfar@123', '1997-07-07', '2019ee260@student.png', 0, 1),
+(7, 'Waqas Manzoor', 'waqasmanzoor30fly@gmail.com', 'Waqas@gmail.com', '1997-07-07', 'waqasmanzoor30fly@gmail.png', 0, 0);
+
 --
--- Indexes for table `attendance`
+-- Indexes for dumped tables
 --
-ALTER TABLE `attendance`
-  ADD KEY `foreign_key_constraint` (`id`);
 
 --
 -- Indexes for table `user_info`
@@ -76,17 +69,7 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `attendance`
---
-ALTER TABLE `attendance`
-  ADD CONSTRAINT `foreign_key_constraint` FOREIGN KEY (`id`) REFERENCES `user_info` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
