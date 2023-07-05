@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2023 at 02:37 PM
+-- Generation Time: Jul 05, 2023 at 03:05 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL,
   `check_in` time NOT NULL,
-  `check_out` time NOT NULL,
+  `check_out` time DEFAULT NULL,
   `checkin_image` varchar(255) NOT NULL,
-  `checkout_image` varchar(255) NOT NULL,
+  `checkout_image` varchar(255) DEFAULT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
