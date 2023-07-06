@@ -1,6 +1,6 @@
 SQL queries
 
-select * from user_info where email = 'areebbutt610@gmail.com' and password = 'areeb@123' and status=1; (login)
+select * from user_info where email = 'areebbutt610@gmail.com' and password = 'areeb@123' ; (login)
 
 INSERT INTO `user_info`( `name`, `email`, `password`, `dob`, `image`, `occupation`, `status`) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]','[value-6]',false,true) (create employee)
 
